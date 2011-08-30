@@ -1,3 +1,7 @@
+import re
+import os
+import uuid
+import simplejson as json
 from gluon.tools import Crud
 
 if deployment_settings.postgis.host:
@@ -81,3 +85,22 @@ class MongoWrapperIter:
             return MongoWrapper (val)
         else:
             return val
+
+class attr_dict (dict):
+    def __init__ (self, **attr):
+        dict.__init__ (self, **attr)
+
+    def __getattr__ (self, key):
+        try:
+            return self[key]
+        except KeyError:
+            return None
+
+    def default (self, key, default):
+        if self.has_key (key):
+            return
+        else:
+            self[key] = default
+
+    def json (self):
+        return json.dumps (self)

@@ -16,7 +16,7 @@ def user():
     to decorate functions that need access control
     """
     if deployment_settings.dev_mode.enabled:
-        psswd = uuid4 ().hex
+        psswd = uuid.uuid4 ().hex
         firstname = deployment_settings.dev_mode.firstname
         lastname = deployment_settings.dev_mode.lastname
         email = deployment_settings.dev_mode.email
@@ -35,7 +35,7 @@ def user():
             cons = session['openid-consumer']
             resp = cons.complete (request.vars, str (request.wsgi.environ['wsgi.url_scheme'] + '://' + request.wsgi.environ['HTTP_HOST'] + request.wsgi.environ['REQUEST_URI']))
             if resp.status == consumer.SUCCESS:
-                psswd = uuid4 ().hex
+                psswd = uuid.uuid4 ().hex
                 ax_resp = resp.getSignedNS (ax.FetchRequest.ns_uri)
                 email = ax_resp['value.email']
                 firstname = ax_resp['value.firstname']
@@ -53,7 +53,7 @@ def user():
             from openid.consumer.consumer import Consumer
             from openid.store.filestore import FileOpenIDStore
             from openid.extensions import ax
-            path = getcwd () + '/applications/' + request.application + '/.openid/'
+            path = os.getcwd () + '/applications/' + request.application + '/.openid/'
             store = FileOpenIDStore (path)
             cons = Consumer (session, store)
             req = cons.begin ('https://www.google.com/accounts/o8/id')
@@ -69,6 +69,3 @@ def user():
             redirect (url)
     else:
         raise HTTP (400, "Bad Request")
-
-def missing():
-    return {'message': session['missing']}

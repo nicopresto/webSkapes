@@ -332,8 +332,8 @@ def split_page (page, length):
     start = 0
     widgets = {}
     strings = []
-    page.body = sub ('%', '&#37;', page.body)
-    page.body = sub ('\n', '\n ', page.body)
+    page.body = re.sub ('%', '&#37;', page.body)
+    page.body = re.sub ('\n', '\n ', page.body)
     for i, widget in enumerate (finditer ('``([^`]|(`(?!`)))*``:widget', page.body)):
         strings.append (page.body[start:widget.start (0)])
         key = 'widget_' + str (i)
@@ -350,8 +350,8 @@ def split_page (page, length):
         page.more = False
         page.body = ' '.join (words)
     page.body = page.body % widgets
-    page.body = sub ('&#37;', '%', page.body)
-    page.body = sub ('\n ', '\n', page.body)
+    page.body = re.sub ('&#37;', '%', page.body)
+    page.body = re.sub ('\n ', '\n', page.body)
     page.cats = []
     return page
 
