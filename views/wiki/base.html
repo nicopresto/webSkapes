@@ -2,12 +2,42 @@
 
 <div id="wrapper_wiki">       
   <div id="header">
-    <span id='title'>The dotSkapes Project</span>
-    <div style="text-align: right">
-      <form style="display: inline;" method="GET" action="{{= URL (r = request) }}"><input name="search" id="search_box" type="text" value="{{ if request.vars.has_key ('search'): }}{{= request.vars.get ('search') }}{{ pass }}" /></form><a href="{{= URL(r=request) }}">Main</a>{{if check_role (writer_role): }}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{= URL(r=request, args=['categories']) }}">Edit Categories</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{= URL(r=request, args=['create']) }}">Create New Page</a>{{ pass }}
+    <div class='tab'>
+	<ul>
+		<li class='tab-list'><a href="{{= URL(r=request) }}">Main</a></li>
+		<li class='tab-list'>{{if check_role (writer_role): }}<a href="{{= URL(r=request, args=['categories']) }}">Edit Categories</a></li>
+		<li class='tab-list'><a href="{{= URL(r=request, args=['create']) }}">Create New Page</a>{{ pass }}</li>
+	</ul>
     </div>
     <div style="clear: both;"></div>
   </div>
 
-  {{ include }}
+		<div class='content'>
+		  {{ include }}
+		</div>
+
+		<div class="clear"></div>
+
+		<div class='footer'>
+		<div class='footer-main'>
+			<div class='footer-all footer-left'>
+			<h3>About</h3>
+			<p>Build a web platform for global environmental health research that fosters collaboration across disciplines and national boundaries--accelerating discovery, advancing outbreak detection, and improving prevention. Make the platform available to multiple disciplines and regions as skapes.org</p>			
+			</div>
+			<div class='footer-all footer-mid'>
+			<h3>Pages</h3>
+			<p>Maecenas vel consectetur risus. Vivamus venenatis dapibus est, mattis placerat est mollis id. Maecenas vel nulla purus. Curabitur et libero ac quam vulputate varius dictum ac orci. Fu</p>
+			</div>
+
+			<div class='footer-all footer-right'>
+			<h3>Search</h3>
+			<form style="display: inline;" method="GET" action="{{= URL (r = request) }}"><input name="search" id="search_box" type="text" value="{{ if request.vars.has_key ('search'): }}{{= request.vars.get ('search') }}{{ pass }}" /></form>
+			</div>
+		</div><div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class='footer-main'>The dotSkapes Project &copy</div>
+
 </div>

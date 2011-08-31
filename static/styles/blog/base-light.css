@@ -1,0 +1,58 @@
+body {
+	margin: 0 auto;
+	font-family: Helvetica, sans-serif;
+	background: #fff;
+	color: #444;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited{
+	
+}
+
+.font-lobster-two {	
+	font-family: 'Lobster Two', cursive;
+}
+
+.font-montez {
+	font-family: 'Montez', cursive;
+}
+
+
+.content {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.footer {
+	background: #efefef;
+	width: 100%;
+	line-height:140%;
+}
+
+#header {
+	/*background: url("../images/tab-background-light.png") repeat-x scroll left top #333;*/
+	border-bottom: 1px dashed #ccd;
+	width: 100%;
+	webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px; 
+}
+
+.copyright {
+	width: 800px;
+	margin: 10px auto;
+}
+
+.w36h36 {
+	width: 36px;
+	height: 36px;
+}
