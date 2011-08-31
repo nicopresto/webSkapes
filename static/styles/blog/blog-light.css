@@ -30,7 +30,7 @@
 .category {
 	width: 100%;
 	height: 40px;
-	background: url("../images/category-background-light.png") repeat-x scroll left top #558;
+	background: url("../../images/category-background-light.png") repeat-x scroll left top #558;
 	opacity: 0.8;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -98,7 +98,7 @@
 	line-height: 40px;
 	padding-left: 10px;
 	color: #eee;
-	background: url("../images/left-top-background-light.png") repeat-x scroll left top #666;
+	background: url("../../images/left-top-background-light.png") repeat-x scroll left top #666;
 	opacity: 0.5;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;	
@@ -129,7 +129,7 @@
 	line-height: 40px;
 	padding-left: 10px;
 	color: #eee;
-	background: url("../images/right-top-background-light.png") repeat-x scroll left top #444;
+	background: url("../../images/right-top-background-light.png") repeat-x scroll left top #444;
 
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;	

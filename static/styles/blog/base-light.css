@@ -15,11 +15,15 @@ a {
 }
 
 a:visited{
-	color: #ccd;
+	
 }
 
 .font-lobster-two {	
 	font-family: 'Lobster Two', cursive;
+}
+
+.font-montez {
+	font-family: 'Montez', cursive;
 }
 
 
