@@ -15,19 +15,20 @@ a {
 }
 
 a:visited{
-	color: #444;
+	color: #ccd;
 }
 
 .font-lobster-two {	
 	font-family: 'Lobster Two', cursive;
 }
 
+
 .content {
 	width: 800px;
 	margin: 0 auto;
 }
 
-#footer {
+.footer {
 	background: #efefef;
 	width: 100%;
 	line-height:140%;
@@ -45,4 +46,9 @@ a:visited{
 .copyright {
 	width: 800px;
 	margin: 10px auto;
+}
+
+.w36h36 {
+	width: 36px;
+	height: 36px;
 }

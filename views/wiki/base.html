@@ -12,4 +12,28 @@
 		  {{ include }}
 		</div>
 
+		<div class="clear"></div>
+
+		<div class='footer'>
+		<div class='footer-main'>
+			<div class='footer-all footer-left'>
+			<h3>About</h3>
+			<p>Build a web platform for global environmental health research that fosters collaboration across disciplines and national boundaries--accelerating discovery, advancing outbreak detection, and improving prevention. Make the platform available to multiple disciplines and regions as skapes.org</p>			
+			</div>
+			<div class='footer-all footer-mid'>
+			<h3>Pages</h3>
+			<p>Maecenas vel consectetur risus. Vivamus venenatis dapibus est, mattis placerat est mollis id. Maecenas vel nulla purus. Curabitur et libero ac quam vulputate varius dictum ac orci. Fu</p>
+			</div>
+
+			<div class='footer-all footer-right'>
+			<h3>Search</h3>
+			<form style="display: inline;" method="GET" action="{{= URL (r = request) }}"><input name="search" id="search_box" type="text" value="{{ if request.vars.has_key ('search'): }}{{= request.vars.get ('search') }}{{ pass }}" /></form>
+			</div>
+		</div><div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class='footer-main'>The dotSkapes Project &copy</div>
+
 </div>
