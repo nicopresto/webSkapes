@@ -96,6 +96,9 @@ def index():
     #query = {'$where': 'return ((this.public) || (this.owner == %d)) && ((this.body.search ("%s") >= 0) || (this.title.search ("%s") >= 0));' % (auth.user.id, term, term)}
     pages = MongoCursorWrapper (mongo.blog.find (query).sort ('date', pymongo.DESCENDING))
     #pages = MongoCursorWrapper (mongo.blog.find (query).sort ('date', pymongo.DESCENDING))
+
+
+	titles = MongoWrapper (mongo.blog.find({public:true},{title:true}))
                 
     if request.vars.has_key ('start'):
         start = require_int (request.vars.get ('start'))
@@ -168,7 +171,7 @@ def index():
     #else:
     #    form=''
 
-    return dict(pages = pages, first = first, last = last, older = older, newer = newer)
+    return dict(pages = pages, first = first, last = last, older = older, newer = newer, titles=titles)
 
 def page():
     """

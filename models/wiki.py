@@ -126,6 +126,7 @@ def render_index (rest_vars):
             c_query,
             ]
         }
+
     pages = MongoCursorWrapper (mongo.blog.find (query).sort ('date', pymongo.DESCENDING))
                 
     if request.vars.has_key ('start'):
@@ -176,6 +177,10 @@ def render_index (rest_vars):
         p.body = sub ('&#37;', '%', p.body)
         p.body = sub ('\n ', '\n', p.body)
         p.cats = []'''
+
+    
+	
+
 
     return dict(pages = pages, first = first, last = last, older = older, newer = newer)
 
