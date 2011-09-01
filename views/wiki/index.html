@@ -72,11 +72,24 @@
 		<h5 class='right-title'>Tags</h5>
 
 		<ul class='right-list'>
+
+		{{ tags = [] }}
+		
 		{{ for page in pages: }}
 			{{ if page.tags: }}
-			<li>{{ =page.tags }}</li>
+				{{ tag = str(page.tags) }}
+				{{ split = tag.split("'") }}
+				{{ count = 0 }}
+				{{ while ( count < len(split)): }}
+					{{ if ( count%2==1 ) & (split[count] not in tags): }}
+						{{ tags.append(split[count]) }}
+						<li>{{=split[count]}}</li>
+					{{ pass }}
+					{{ count = count + 1 }}
+				{{ pass }}
 			{{ pass }}
 		{{ pass }}
+
 		</ul>
 
 		</div>
