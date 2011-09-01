@@ -71,6 +71,11 @@
 	box-shadow: 3px 3px 3px 3px #aaa; 
 }
 
+.post ul {
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
 .date {
 	position: absolute;
 	left: -142px;
@@ -146,7 +151,7 @@
 .right-list {
 	margin:0;
 	padding-left: 20px;
-	list-style-type: square;
+	list-style-type: disc;
 }
 
 .follow {
