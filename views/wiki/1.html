@@ -2,7 +2,7 @@
 
 <div class='banner'>
 
-	<h1 class='banner-title'>The dotSkapes Blog</h1>
+	<h1 class='banner-title'>The dotSkapes Project</h1>
 	<p class='blog-description font-lobster-two'>Blog description blah blah blah</p>
 
 </div>
@@ -11,8 +11,8 @@
 
 	<ul>
 	{{ for cat in MongoWrapper (mongo.categories.find ({request.function: True})): }}
-	<li class='category-list'>
-	<a class='color-eef' href="{{= URL (r = request, args = request.args, vars = {'cat': str (cat._id)}) }}">{{= cat.name }}</a>
+	<li>
+	<a href="{{= URL (r = request, args = request.args, vars = {'cat': str (cat._id)}) }}">{{= cat.name }}</a>
 	</li>
 	{{ pass }}
 	</ul>
@@ -43,7 +43,7 @@
 			</div><!-- end of plugin_wiki -->
 			{{ pass }}
 
-		</div></div>
+		</div>
 
 	</div>
 
@@ -56,13 +56,18 @@
 		<h5 class='right-title'>Titles</h5>
 
 		<ul class='right-list'>
-
-		{{ for page in pages: }}
-			{{ if page.title: }}
-			<li>{{ =page.title }}</li>
-			{{ pass }}
-		{{ pass }}
-
+			<li>
+			testing title 1
+			</li>
+			<li>
+			testing title 2
+			</li>
+			<li>
+			testing title 3
+			</li>
+			<li>
+			testing title 4
+			</li>
 		</ul>
 
 		</div>
@@ -72,24 +77,18 @@
 		<h5 class='right-title'>Tags</h5>
 
 		<ul class='right-list'>
-
-		{{ tags = [] }}
-		
-		{{ for page in pages: }}
-			{{ if page.tags: }}
-				{{ tag = str(page.tags) }}
-				{{ split = tag.split("'") }}
-				{{ count = 0 }}
-				{{ while ( count < len(split)): }}
-					{{ if ( count%2==1 ) & (split[count] not in tags): }}
-						{{ tags.append(split[count]) }}
-						<li>{{=split[count]}}</li>
-					{{ pass }}
-					{{ count = count + 1 }}
-				{{ pass }}
-			{{ pass }}
-		{{ pass }}
-
+			<li>
+			testing tag 1
+			</li>
+			<li>
+			testing tag 2
+			</li>
+			<li>
+			testing tag 3
+			</li>
+			<li>
+			testing tag 4
+			</li>
 		</ul>
 
 		</div>
@@ -100,15 +99,14 @@
 
 		<ul class='right-list follow'>
 			<li class='follow-li' title='Twitter'><a href="http://www.twitter.com/dotskapes"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-a.png" alt="Follow dotskapes on Twitter"/></a></li>
-			<li class='follow-li' title='Feeds'><a href="#"><img class='w36h36' src="http://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg" alt="Follow dotskapes on rss feed"/></a></li>
-			<li class='follow-li' title='dotSkapes'><a href="http://skapes.org"><img class='w36h36' src="http://skapes.org/app/static/images/130px_logo_white_alpha.png" alt="dotskapes.com"/></a></li>
-
+			<li class='follow-li' title='Google Group'><a href="http://groups.google.com/group/healthscapes?pli=1"><img src="/{{=request.application}}/static/images/google.jpeg" alt="Follow dotskapes on Google group"/></a></li>
+			<li class='follow-li' title='Feeds'><a href="#"><img src="/{{=request.application}}/static/images/rss.jpeg" alt="Follow dotskapes on rss feed"/></a></li>
 		</ul>
 			
 		<div class='clear'></div>
 
 		</div>
-	<div class='clear'></div>
+
 	</div>
 	<div class='clear'></div>
 </div>

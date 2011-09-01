@@ -1,0 +1,90 @@
+{{ extend 'wiki/base.html' }}
+
+<div class='banner'>
+
+	<h1 class='banner-title'>My blog</h1>
+	<p class='blog-description font-lobster-two'>Blog description blah blah blah</p>
+
+</div>
+
+<div class='category'>
+
+	<ul>
+
+	<li class='category-list'>Welcome</li>
+	<li class='category-list'>The Other Tag</li>
+
+	</ul>
+	
+	<div class='clear'></div>
+
+</div>
+
+<div class='blog-section'>
+
+	<div class='left-col'>
+		<h4 class='left-top'>Recent Articles</h4>
+
+		<div class='post'>
+			<div class='date'>26 Aug</div>
+			<h4 class='left-title'>Lorem ipsum</h4>
+			<div class='post-content'>
+			<p>Maecenas vel consectetur risus. Vivamus venenatis dapibus est, mattis placerat est mollis id. Maecenas vel nulla purus. Curabitur et libero ac quam vulputate varius dictum ac orci. Fusce et libero dapibus nisl posuere eleifend non non mauris. Donec elit lectus, pharetra eu venenatis vitae, viverra non augue. Proin venenatis odio ac nisl sodales bibendum.</p>
+			</div>
+
+		</div>
+
+		<div class='post'>
+			<div class='date'>29 Aug</div>
+			<h4 class='left-title'>Sce et li</h4>
+			<div class='post-content'>
+			<p>O dapibus nisl posuere eleifend non non mauris. DMaecenas vel consectetur risus. Vivamus venenatis dapibus est, mattis placerat est mollis id. Maecenas vel nulla purus. Curabitur et libero ac quam vulputate varius dictum ac orci. Fusce et liberonec elit lectus, pharetra eu venenatis vitae, viverra non augue. Proin venenatis odio ac nio dapibus nisl posuere eleifend non non mauris. Dsl sodales bibendum.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class='right-col'>
+
+	<h4 class='right-top'>Summary</h4>
+		
+		<div class='right-box'>
+
+		<h5 class='right-title'>Recent Articles</h5>
+
+		<ul class='right-list'>
+			<li>Lorem ipsum</li>
+			<li>Sce et li</li>
+		</ul>
+
+		</div>
+
+		<div class='right-box'>
+
+		<h5 class='right-title'>Archives</h5>
+
+		<ul class='right-list'>
+			<li>August 2011</li>
+		</ul>
+
+		</div>
+
+		<div class='right-box'>
+
+		<h5 class='right-title'>Follow Us</h5>
+
+		<ul class='right-list follow'>
+			<li class='follow-li' title='Twitter'><a href="http://www.twitter.com/dotskapes"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-a.png" alt="Follow dotskapes on Twitter"/></a></li>
+			<li class='follow-li' title='Google Group'><a href="http://groups.google.com/group/healthscapes?pli=1"><img src="/{{=request.application}}/static/images/google.jpeg" alt="Follow dotskapes on Google group"/></a></li>
+			<li class='follow-li' title='Feeds'><a href="#"><img src="/{{=request.application}}/static/images/rss.jpeg" alt="Follow dotskapes on rss feed"/></a></li>
+		</ul>
+			
+		<div class='clear'></div>
+
+		</div>
+
+	</div>
+	<div class='clear'></div>
+</div>
+
